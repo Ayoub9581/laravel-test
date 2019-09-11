@@ -13,5 +13,8 @@
 
 Route::view('/', 'home');
 Route::view('contact-us', 'contact');
-Route::get('articles', 'ArticleController@list');
-Route::post('articles', 'ArticleController@add');
+
+
+
+Route::get('listannonce','AnnonceController@list');
+Route::post('listannonce','AnnonceController@add');
