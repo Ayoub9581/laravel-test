@@ -27,14 +27,14 @@ class AnnonceController extends Controller
     	$image = $request->file('picture');
  		
     	$imageName = time() . '.' . $image->getClientOriginalExtension();
-    	 dd(request()->picture->move(public_path('storage'), $imageName));
+    	request()->picture->move(public_path('storage'), $imageName);
 
 
     	// dd($imageName);
     	$annonce->name_annonce = request('annonce');
     	$annonce->description = request('description');
     	$annonce->image = $imageName;
-    
+   
     	$annonce->save();
     	
 
